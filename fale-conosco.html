@@ -1,0 +1,201 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="estilo.css">
+<link rel="stylesheet" type="text/css" href="falar.css">
+<meta charset="utf-8"/>
+
+<title>Tuning Motos</title>
+
+<script>
+
+function mudafoto (foto)
+{
+document.getElementById("icone").src=foto;
+}
+</script>
+
+<script>
+
+function calc_total()
+{
+ var qtd = parseInt(document.getElementById('cQtd').value);
+ tot = qtd*1500;
+ document.getElementById('cTot').value= tot;
+}
+</script>
+
+
+</head>
+<body>
+
+
+
+<div class="interface">
+
+
+
+<div class="cabecalho">
+<hgroup>
+
+
+
+<h1>Tuning Motos
+
+</h1>
+
+<h2>A revolução em duas rodas está chegando</h2>
+
+
+ </hgroup>
+<div class="redes">
+	<div class="menu_social">
+					<ul class="social">
+						<li><a class="face" href="http://facebook.com" target="black"></a></li> 
+						<li><a class="twt" href="http://twitter.com" target="black"></a></li>
+						<li><a class="g" href="http://gmail.com" target="black"></a></li>
+						<li><a class="yt" href="http://youtube.com" target="black"></a></li>
+					</ul>
+				
+                </div>
+
+ </div>
+ 
+<div class="icone">
+ 
+
+ <img id="icone"src="imagens/contato.png"/>
+ 
+</div>
+
+ </div>
+
+
+
+ <nav class="menu">
+ 
+ </header>
+ 
+<h1>Menu Principal</h1>
+
+<ul>
+
+<li onmousemove="mudafoto('imagens/home.png')" onmouseout="mudafoto('imagens/contato.png')"><a href="index.html">Home </a></li>
+<li onmousemove="mudafoto('imagens/especificacoes.png')" onmouseout="mudafoto('imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+<li onmousemove="mudafoto('imagens/fotos.png')" onmouseout="mudafoto('imagens/contato.png')"><a href="Fotos.html">Fotos</a> </li>
+<li onmousemove="mudafoto('imagens/multimidia.png')" onmouseout="mudafoto('imagens/contato.png')"><a href="Multimidia.html">Multimidia</a></li>
+<li onmousemove="mudafoto('imagens/contato.png')" onmouseout="mudafoto('imagens/home.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+</ul>
+
+</nav>
+
+</header>
+<section class="corpo-full">
+
+<article class="noticia-principal">
+
+<header class="cabecalho-artigo">
+
+<hgroup>
+<h3>Fale Conosco > Contato</h3>
+<h1>Formulário de Contato</h1>
+<h2>Feito por Darlan Souza</h2>
+<h3 class="direita">Atualizado hoje</h3>
+</hgroup>
+</header>
+<div class="interfa">
+<form method="post" id="tcontato" action="mailto:dlansouz@outlook.com" >
+
+
+<fieldset id="usuario">
+<legend>Identificação do Usuário</legend>
+<div class="usu">
+   <p> <label for="cnome">Nome: </label><input type="text"  name="tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"/> </p>
+     <p><label for="csenha">Senha:</label> <input type="password"  name="tsenha" id="csenha" size="8" maxlength="8" placeholder="8 Dígitos"/> </p>
+     <p><label for="cmail">E-mail: </label><input type="email"  name="tmail" id="cmail" size="20" maxlength="40" /></p>
+    <fieldset id="sexo"> 
+	<legend>Sexo:</legend>
+	   <input type="radio" name="tsexo" id="cmasc"/>  <label for="cmasc">Masculino</label>
+       </br>
+	   <input type="radio" name="tsexo" id="cfemi"/>  <label for="cfemi"> Feminino</label>
+		</fieldset>
+    <p>Data de Nascimento: <input type="date" name="tnasc" id="cnasc"/>  <label for="cmasc"> </p>
+	</div>
+</fieldset>
+
+
+
+	<fieldset id="endereço">
+	
+	<div class="end">
+<legend>Endereço do Usuário</legend>
+    <p><label for="crua">Logradouro:</label><input type="text"  name="trua" id="crua" size="13" maxlength="80" placeholder="Rua, Av, Tra ..."/></p>
+    
+	<p><label for="cnum">Número:</label><input type="number"  name="tnum" id="cnum" min="0" max="99999"</p>
+   
+   
+   
+   <p><label for="cEst">Estado:</label>
+   
+   <select name="tEst" id="cEst"></p>
+   
+   <optgroup label="Região Sudeste">
+   <option value="MG"> Minas Gerais</option>
+    <option value="RJ"> Rio de Janeiro</option>
+	 <option value="SP"> São Paulo</option>
+	 </optgroup>
+	 
+	 <optgroup label="Região Sul">
+	  <option value="PR"> Paraná</option>
+	   <option value="SC">Santa Catarina</option>
+	    <option value="RS"> Rio Grande do Sul</option>
+		 </optgroup>
+		
+   </select>
+   
+    <p><label for="ccid">Cidade:</label>
+	</label><input type="text"  name="tcid" id="ccid" maxlength="40" size="20" placeholder=" Sua Cidade" list="cidades"/>
+	</p>
+	<datalist id="cidades">
+	
+	<option value=" Rio de Janeiro"></option>
+	<option value=" Belo Horizonte"></option>
+	<option value=" Aricanduva"></option>
+	<option value=" Itamarandiba"></option>
+	
+	</datalist>
+	<div>
+</fieldset>
+	
+	
+	<fieldset id="mensagem">
+	<div class="men">
+<legend>Mensagem do Usuário</legend>
+    <p> <label for="cUrg">Grau de Urgência:</label>
+Mín<input type="range"  name="tUrg" id="cUrg"min="0" max="10" step="2"/>Máx</p>
+	
+    <p> <label for="cMsg">Mensagem:</label>
+	<textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+	</div>
+</fieldset>
+	
+	
+
+
+<input type="image" name="tEnviar" src="imagens/botao-enviar.png"/>
+
+</form>
+
+<footer class="rodape">
+<p>2015 - Por Darlan Souza
+</br>
+<a href="http://facebook.com" target="black">Facebook</a>
+|
+<a href="http://twitter.com" target="black">Twitter</a></p>
+</footer>
+</div>
+</div>
+</body>
+
+</html>
